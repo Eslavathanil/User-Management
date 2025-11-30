@@ -13,7 +13,7 @@ A full-stack application for managing users with CRUD operations, manager assign
 ## 🖥️ Dashboard
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dwoeq9kih/image/upload/v1764508577/Screenshot_2025-11-30_184550_fooocf.png" width="500"/>
+  <img src="https://res.cloudinary.com/dwoeq9kih/image/upload/v1764508577/Screenshot_2025-11-30_184550_fooocf.png" width="800"/>
 </p>
 
 ### Backend
