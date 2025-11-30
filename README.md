@@ -1,40 +1,36 @@
-## User Management System
+# User Management System
 
-A full-stack application for managing users with CRUD operations, manager assignment, validation, and MongoDB integration. Built with a clean architecture and a modern React frontend.
+A full-stack application for managing users with CRUD operations, manager assignment, validations, and MongoDB integration. Built with a clean architecture and modern React frontend.
 
 ## 📌 Project Overview
 
-This system provides REST APIs to create, read, update, and delete user records.
-Each user is linked to a manager, validated, and stored securely in MongoDB.
-The React frontend offers a simple and interactive UI to use the APIs.
+* Provides REST APIs to create, read, update, and delete users.
+* Each user is linked to a manager and validated before saving.
+* Backend handles logging, validation, error handling, and database operations.
+* Frontend built with React allows smooth interaction with APIs.
 
 ## 🚀 Technologies Used
+
 ### Backend
 
-Node.js
-
-Express.js
-
-MongoDB + Mongoose
-
-UUID
-
-dotenv
-
-Nodemon
+* Node.js
+* Express.js
+* MongoDB + Mongoose
+* UUID
+* dotenv
+* Nodemon
 
 ### Frontend
 
-React (Vite + TypeScript)
+* React (Vite + TypeScript)
+* Tailwind CSS
+* Axios
 
-Tailwind CSS
+## 📁 Folder Structure
 
-shadcn-ui
-
-Axios
-
-## 📁 Project Structure
 ### Backend
+
+```
 backend/
 ├── config/
 ├── controllers/
@@ -46,8 +42,11 @@ backend/
 ├── logs/
 ├── .env.example
 └── server.js
+```
 
 ### Frontend
+
+```
 frontend/
 ├── src/
 │   ├── api/
@@ -58,9 +57,13 @@ frontend/
 │   └── main.tsx
 ├── index.html
 └── package.json
+```
 
-## 🗄️ MongoDB Schema Details
+## 🗄️ MongoDB Schema
+
 ### Users Collection
+
+```json
 {
   "user_id": "UUID v4",
   "full_name": "String",
@@ -71,8 +74,11 @@ frontend/
   "created_at": "Date",
   "updated_at": "Date"
 }
+```
 
 ### Managers Collection
+
+```json
 {
   "manager_id": "UUID v4",
   "name": "String",
@@ -80,97 +86,149 @@ frontend/
   "is_active": true,
   "created_at": "Date"
 }
-
+```
 
 Seed script generates sample managers.
 
-## ⚙️ Backend Installation & Running
-### 1. Install dependencies
+## ⚙️ Backend Setup
+
+### 1️⃣ Install dependencies
+
+```bash
 cd backend
 npm install
+```
 
-### 2. Setup environment
+### 2️⃣ Setup environment
+
+```bash
 cp .env.example .env
+```
 
+Example `.env`:
 
-Example:
-
+```
 NODE_ENV=development
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/user_management_dev
 LOG_LEVEL=debug
+```
 
-### 3. Start MongoDB
+### 3️⃣ Start MongoDB
 
-Use local MongoDB or Atlas.
+* Local MongoDB: `mongod`
+* MongoDB Atlas: paste cloud URI into `.env`
 
-### 4. Seed managers
+### 4️⃣ Seed sample managers
+
+```bash
 npm run seed
+```
 
-### 5. Start backend
+### 5️⃣ Start backend server
+
+```bash
 npm run dev
+```
 
+Backend runs at: [http://localhost:5000](http://localhost:5000)
 
-Runs at:
-👉 http://localhost:5000
+## 🖥️ Frontend Setup
 
-## 🖥️ Frontend Installation & Running
+### 1️⃣ Install dependencies
+
+```bash
 cd frontend
 npm install
+```
+
+### 2️⃣ Start development server
+
+```bash
 npm run dev
+```
 
-
-Runs at:
-👉 http://localhost:5173
+Frontend runs at: [http://localhost:5173](http://localhost:5173)
 
 ## 🔄 Architecture Flow
+
+```
 React Frontend
       ↓
-Axios Requests
+Axios API Calls
       ↓
-Express Backend
+Express Backend Routes
       ↓
-Controllers
+Controllers (Business Logic)
       ↓
 Validation Utilities
       ↓
-MongoDB (Mongoose)
-
+MongoDB (Mongoose Models)
+```
 
 Features:
 
-Clean architecture
+* Request logging
+* Centralized validation
+* Error-handling middleware
+* Manager relationship validation
 
-Centralized validation
+## 🛠 Git Commands to Push Project
 
-Error-handling middleware
+1️⃣ Initialize Git:
 
-Manager relationship validation
+```bash
+git init -b main
+```
 
-Request logging
+2️⃣ Add files:
+
+```bash
+git add .
+```
+
+3️⃣ Commit:
+
+```bash
+git commit -m "Initial commit"
+```
+
+4️⃣ Add remote repository:
+
+```bash
+git remote add origin https://github.com/Eslavathanil/User-Management.git
+```
+
+5️⃣ Push code:
+
+```bash
+git push -u origin main
+```
+
+> ⚠ If branch is `master` instead of `main`, use `git push -u origin master`.
 
 ## 🚢 Deployment Flow
+
 ### Backend
+
+```bash
 NODE_ENV=production
 npm install -g pm2
 pm2 start server.js --name user-api
-
+```
 
 Use MongoDB Atlas for production.
 
 ### Frontend
+
+```bash
 npm run build
+```
 
+Deploy `/dist` folder to:
 
-Deploy /dist to:
-
-Netlify
-
-Vercel
-
-AWS S3
-
-Nginx
+* Netlify
+* Vercel
 
 ## 📝 License
 
