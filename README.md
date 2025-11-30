@@ -1,87 +1,66 @@
 ## User Management System
 
-A full-stack application for managing users with complete CRUD operations, manager assignment, PAN/mobile validations, and MongoDB integration. Designed with clean architecture, reusable modules, and environment-based configuration.
+A full-stack application for managing users with CRUD operations, manager assignment, validation, and MongoDB integration. Built with a clean architecture and a modern React frontend.
 
 ## 📌 Project Overview
 
-This system provides four RESTful API endpoints to create, retrieve, update, and delete user records. Each user is associated with a manager, validated before entry. The backend handles validation, error management, logging, and database operations.
-A React frontend allows easy interaction with the APIs.
+This system provides REST APIs to create, read, update, and delete user records.
+Each user is linked to a manager, validated, and stored securely in MongoDB.
+The React frontend offers a simple and interactive UI to use the APIs.
 
 ## 🚀 Technologies Used
-# Backend
+### Backend
 
 Node.js
 
-Runs JavaScript on the server to build backend applications.
-
 Express.js
-
-Simplifies API creation with clean routing, middleware, and request handling.
 
 MongoDB + Mongoose
 
-MongoDB → Database
-Mongoose → Schema-based tool to interact with MongoDB easily and safely.
-
 UUID
-
-Generates unique IDs (user_id, manager_id) for reliable identification.
 
 dotenv
 
-Loads environment variables (DB URI, PORT) from a .env file securely.
-
 Nodemon
 
-Auto-restarts the server whenever you change code during development.
-
-
-
-# Frontend
+### Frontend
 
 React (Vite + TypeScript)
-Builds fast, interactive UI.
 
 Tailwind CSS
 
-Utility-first CSS framework for rapid, modern, responsive UI design.
-
 shadcn-ui
-
-Pre-built, customizable, beautiful UI components that speed up development.
 
 Axios
 
-Used to send API requests from the frontend to the backend easily and reliably
-
 ## 📁 Project Structure
-# Backend Folder Structure
+### Backend
 backend/
-├── config/            # MongoDB connection
-├── controllers/       # Business logic for APIs
-├── middlewares/       # Error handling middleware
-├── models/            # Mongoose schemas (User, Manager)
-├── routes/            # API routing files
-├── utils/             # Logging + validation utilities
-├── scripts/           # Manager seeding script
-├── logs/              # Auto-generated logs
-├── .env.example       # Environment variables template
-└── server.js          # Main server entry point
+├── config/
+├── controllers/
+├── middlewares/
+├── models/
+├── routes/
+├── utils/
+├── scripts/
+├── logs/
+├── .env.example
+└── server.js
 
-Frontend Folder Structure
+### Frontend
 frontend/
 ├── src/
-│   ├── api/           # API services (axios)
-│   ├── components/    # Reusable UI components
-│   ├── hooks/         # Custom React hooks
-│   ├── pages/         # App screens
-│   ├── lib/           # Utility helpers
-│   └── main.tsx       # React app entry point
+│   ├── api/
+│   ├── components/
+│   ├── hooks/
+│   ├── pages/
+│   ├── lib/
+│   └── main.tsx
 ├── index.html
 └── package.json
 
-# 🗄️ MongoDB Schema Details
-Users Collection
+## 🗄️ MongoDB Schema Details
+### Users Collection
 {
   "user_id": "UUID v4",
   "full_name": "String",
@@ -93,7 +72,7 @@ Users Collection
   "updated_at": "Date"
 }
 
-Managers Collection
+### Managers Collection
 {
   "manager_id": "UUID v4",
   "name": "String",
@@ -106,34 +85,34 @@ Managers Collection
 Seed script generates sample managers.
 
 ## ⚙️ Backend Installation & Running
-1. Install dependencies
+### 1. Install dependencies
 cd backend
 npm install
 
-2. Setup environment file
-
+### 2. Setup environment
 cp .env.example .env
+
+
+Example:
 
 NODE_ENV=development
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/user_management_dev
 LOG_LEVEL=debug
 
-3. Start MongoDB
+### 3. Start MongoDB
 
-MongoDB Atlas (cloud):
-Paste cloud URI in .env
+Use local MongoDB or Atlas.
 
-4. Seed Sample Managers
+### 4. Seed managers
 npm run seed
 
-5. Start backend server
+### 5. Start backend
 npm run dev
 
 
 Runs at:
-
-http://localhost:5000
+👉 http://localhost:5000
 
 ## 🖥️ Frontend Installation & Running
 cd frontend
@@ -142,58 +121,48 @@ npm run dev
 
 
 Runs at:
-
-http://localhost:5173
+👉 http://localhost:5173
 
 ## 🔄 Architecture Flow
 React Frontend
       ↓
-Axios API Calls
+Axios Requests
       ↓
-Express Backend Routes
+Express Backend
       ↓
-Controllers (Business Logic)
+Controllers
       ↓
 Validation Utilities
       ↓
-MongoDB (Mongoose Models)
+MongoDB (Mongoose)
 
 
-Logging for every request
+Features:
+
+Clean architecture
 
 Centralized validation
 
-Error-handler middleware
+Error-handling middleware
 
 Manager relationship validation
 
+Request logging
+
 ## 🚢 Deployment Flow
-Backend Deployment
-
-Set environment:
-
+### Backend
 NODE_ENV=production
-
-
-Use MongoDB Atlas
-
-Install PM2:
-
 npm install -g pm2
-
-
-Run production service:
-
 pm2 start server.js --name user-api
 
-Frontend Deployment
 
-Build:
+Use MongoDB Atlas for production.
 
+### Frontend
 npm run build
 
 
-Deploy /dist folder to:
+Deploy /dist to:
 
 Netlify
 
@@ -201,8 +170,8 @@ Vercel
 
 AWS S3
 
-Nginx server
+Nginx
 
-📝 License
+## 📝 License
 
 MIT License
