@@ -153,7 +153,9 @@ Frontend runs at: [http://localhost:5173](http://localhost:5173)
 ## 🔄 Architecture Flow
 ## Preview
 
-![FLOW](https://res.cloudinary.com/dwoeq9kih/image/upload/v1764508239/ChatGPT_Image_Nov_30_2025_06_00_04_PM_emlwtj.png)
+<p align="center">
+  <img src="https://res.cloudinary.com/dwoeq9kih/image/upload/v1764508239/ChatGPT_Image_Nov_30_2025_06_00_04_PM_emlwtj.png" width="500"/>
+</p>
 
 
 Features:
