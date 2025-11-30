@@ -68,7 +68,7 @@ frontend/
 ## 🗄️ User & Manager Collection
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dwoeq9kih/image/upload/v1764508627/Screenshot_2025-11-30_184655_lomnia.png" width="500"/>
+  <img src="https://res.cloudinary.com/dwoeq9kih/image/upload/v1764508627/Screenshot_2025-11-30_184655_lomnia.png" width="800"/>
 </p>
 
 ### Users Collection
@@ -164,7 +164,7 @@ Frontend runs at: [http://localhost:5173](http://localhost:5173)
 ## Preview
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dwoeq9kih/image/upload/v1764508239/ChatGPT_Image_Nov_30_2025_06_00_04_PM_emlwtj.png" width="500"/>
+  <img src="https://res.cloudinary.com/dwoeq9kih/image/upload/v1764508239/ChatGPT_Image_Nov_30_2025_06_00_04_PM_emlwtj.png" width="800" height="600"/>
 </p>
 
 
