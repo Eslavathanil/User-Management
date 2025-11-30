@@ -10,6 +10,11 @@ A full-stack application for managing users with CRUD operations, manager assign
 * Frontend built with React allows smooth interaction with APIs.
 
 ## 🚀 Technologies Used
+## 🖥️ Dashboard
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dwoeq9kih/image/upload/v1764508577/Screenshot_2025-11-30_184550_fooocf.png" width="500"/>
+</p>
 
 ### Backend
 
@@ -60,6 +65,11 @@ frontend/
 ```
 
 ## 🗄️ MongoDB Schema
+## 🗄️ User & Manager Collection
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dwoeq9kih/image/upload/v1764508627/Screenshot_2025-11-30_184655_lomnia.png" width="500"/>
+</p>
 
 ### Users Collection
 
