@@ -1,0 +1,39 @@
+{
+  "name": "user-management-backend",
+  "version": "1.0.0",
+  "description": "User Management API with MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "dev:staging": "NODE_ENV=staging nodemon server.js",
+    "dev:production": "NODE_ENV=production nodemon server.js",
+    "start:staging": "NODE_ENV=staging node server.js",
+    "start:production": "NODE_ENV=production node server.js",
+    "seed": "node scripts/seedManagers.js",
+    "seed:staging": "NODE_ENV=staging node scripts/seedManagers.js",
+    "seed:production": "NODE_ENV=production node scripts/seedManagers.js",
+    "env:dev": "node scripts/switchEnv.js development",
+    "env:staging": "node scripts/switchEnv.js staging",
+    "env:prod": "node scripts/switchEnv.js production"
+  },
+  "keywords": [
+    "user-management",
+    "api",
+    "mongodb",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "mongodb": "^7.0.0",
+    "mongoose": "^8.20.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

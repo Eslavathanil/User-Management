@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.local
+logs/
+*.log
+.DS_Store
+
+# Note: .env.development, .env.staging, .env.production are tracked
+# as templates but .env (active config) is ignored
